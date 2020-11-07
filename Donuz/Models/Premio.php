@@ -49,7 +49,7 @@ class Premio
      *
      * @return mixed
      */
-    public function getInfoReward($idPremio)
+    public function getInfoReward($idPremio, $order = null, $limit = null)
     {
         return Curl::get('premio/' . Curl::$estabelecimento_id . '/' . $idPremio, ['Token: ' . Curl::$token, 'Order: ' . $order, 'Limit: ' . $limit]);
     }
